@@ -18,7 +18,7 @@
     var ctx = canvas.getContext("2d");
     var canvasData = ctx.createImageData(300,300);
 
-	  ctx
+	  ctx.moveTo(p1[0],p1[1]);
 
 	  ctx.putImageData(canvasData, 0, 0);
   }
