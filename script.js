@@ -1,14 +1,6 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
 
-  function setPixel(imageData, x, y, r, g, b, a) {
-    var index = (x + y * imageData.width) * 4;
-    imageData.data[index+0] = r;
-    imageData.data[index+1] = g;
-  	imageData.data[index+2] = b;
-	  imageData.data[index+3] = a;
-  }    
-
   function draw() {	
 	  var canvas = document.getElementById("tutorial");
     var ctx = canvas.getContext("2d");
