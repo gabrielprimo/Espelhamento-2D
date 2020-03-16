@@ -13,14 +13,12 @@
 	  ctx.stroke();
   }
 
-  function draw_line() {
+  function draw_line(p1, p2) {
 	  var canvas = document.getElementById("tutorial");
     var ctx = canvas.getContext("2d");
     var canvasData = ctx.createImageData(300,300);
 
-	  for(var x=0; x<300; x++) {
-		  setPixel(canvasData,x,200,200,255,0,255);	
-	  }
+	  ctx
 
 	  ctx.putImageData(canvasData, 0, 0);
   }
