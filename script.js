@@ -31,6 +31,9 @@
     ctx.stroke();
   }
 
+  //função que recebe o eixo 'x' ou 'y' e altera as coordenadas
+  //do array forma para que a forma seja translada no eixo escolhido
+  //com o valor passado como parâmetro.
   function transladar(eixo, valor) {
     
   }
