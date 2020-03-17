@@ -13,6 +13,8 @@
   function draw_polygon() {	
 	  var canvas = document.getElementById("tutorial");
     var ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
     var i=0;
     //cada elemento da forma possui uma coordenada x,y
     //ou seja um ponto
@@ -38,11 +40,15 @@
   //do array forma para que a forma seja translada no eixo escolhido
   //com o valor passado como parâmetro.
   function transladar(eixo, valor) {
-    /*
-    faça aqui o seu algoritmo para realizar o translado
-    
-    //a última linha deverá invocar a função draw_polygon() para desenhar
-    //o poligono transladado no canvas
-    draw_poligon()
-    */
+    if(eixo=='x') {
+      for(var i=0; i< forma.length; i++) {
+        forma[i][0]+= valor;
+      }
+    }
+    else {
+      for(var i=0; i< forma.length; i++) {
+        forma[i][1]+= valor;
+      }
+    }
+    draw_polygon();
   }
