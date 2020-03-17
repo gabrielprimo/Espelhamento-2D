@@ -14,6 +14,8 @@
 	  var canvas = document.getElementById("tutorial");
     var ctx = canvas.getContext("2d");
     var i=0;
+    //cada elemento da forma possui uma coordenada x,y
+    //ou seja um ponto
     for(i; i< forma.length-1; i++) {
         draw_line(forma[i],forma[i+1]);
     }
@@ -21,6 +23,7 @@
   }
 
   //função que desenha uma reta a partir de 2 pontos
+  //cada ponto possui 
   function draw_line(p1, p2) {
 	  var canvas = document.getElementById("tutorial");
     var ctx = canvas.getContext("2d");
@@ -35,5 +38,11 @@
   //do array forma para que a forma seja translada no eixo escolhido
   //com o valor passado como parâmetro.
   function transladar(eixo, valor) {
+    /*
+    faça aqui o seu algoritmo para realizar o translado
     
+    //a última linha deverá invocar a função draw_polygon() para desenhar
+    //o poligono transladado no canvas
+    draw_poligon()
+    */
   }
