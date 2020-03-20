@@ -52,3 +52,13 @@
     }
     draw_polygon();
   }
+
+  //função que recebe o fator de escala e deve alterar de forma igual
+  //as coordenadas x e y do objeto de forma a não deformar o objeto
+  //nem que o objeto sofra translações indesejáveis
+  function escalar(fator) {
+    /*
+    Implemente aqui o código para escalar o objeto
+    Não se esqueça de chamar a função draw_polygon ao final
+    */
+  }

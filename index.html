@@ -13,7 +13,7 @@
     <script src="/script.js" defer></script>
   </head>  
   <body onload="draw_polygon()">
-    <h1>Transformações Geométricas 2D - Translado</h1>
+    <h1>Transformações Geométricas 2D - Translado e Escala</h1>
     
     <canvas id="tutorial" width="300" height="300">
     Seu navegador não possui suporte a HTML5
@@ -33,6 +33,14 @@
     <button type="button" onclick="transladar('x',10)">
       ->
     </button>
+    <br>
+    <button type="button" onclick="escalar(1.5)">
+      Zoom+  
+    </button>
+    <button type="button" onclick="escalar(0.5)">
+      Zoom-
+    </button>
+    
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
