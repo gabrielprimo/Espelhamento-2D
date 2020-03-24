@@ -61,4 +61,23 @@
     Implemente aqui o código para escalar o objeto
     Não se esqueça de chamar a função draw_polygon ao final
     */
+    var pontoref = forma[0];
+
+    for(var i=0;i<forma.length;i++){
+      forma[i][0] = forma[i][0] - pontoref[0];
+      forma[i][1] = forma[i][1] - pontoref[1];
+    }
+    
+    for(var i=0;i<forma.length;i++) {
+      forma[i][0] = forma[i][0] * fator;
+      forma[i][1] = forma[i][1] * fator;
+    }
+
+      
+    for(var i=0;i<forma.lenth;i++) {
+      forma[i][0] = forma[i][0] + pontoref[0];
+      forma[i][1] = forma[i][1] + pontoref[1];
+    }
+    
+    draw_polygon();
   }
