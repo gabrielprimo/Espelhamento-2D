@@ -70,6 +70,9 @@
       
       forma[i][0] *= fator;
       forma[i][1] *= fator;
+      
+      forma[i][0] += xref;
+      forma[i][1] += yref;
     }
     draw_polygon();
   }
