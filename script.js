@@ -76,3 +76,8 @@
     }
     draw_polygon();
   }
+
+  function rotacionar(graus) {
+    //As funcoeos Math.sin e Math.cos do javascript trabalham em radianos
+    //deve fazer a conversao de graus para radianos.
+  }
