@@ -80,8 +80,31 @@
   function rotacionar(graus) {
     //As funcoeos Math.sin e Math.cos do javascript trabalham em radianos
     //deve fazer a conversao de graus para radianos.
-    var rad = graus * (Math.PI/180)
+    var rad = graus * (Math.PI/180);
+    
+    var xm = 0;
+    var ym = 0;
+    
+    for(var i=0;i<forma.length;i++)  {
+      xm+=forma[i][0];
+      ym+=forma[i][1];
+    }
+    
+    xm=xm/forma.length;
+    ym=ym/forma.length;
+    
+    for(var i=0;i<forma.length;i++) {
+      forma[i][0] -= xm;
+      forma[i][1] -= ym;
+      
+      var x = (forma[i][0]*Math.cos(rad)) - (forma[i][1]*Math.sin(rad));
+      var y = (forma[i][1]*Math.cos(rad)) + (forma[i][0]*Math.sin(rad));
+      
+      
+    }
     
     x = forma[i][0]*Math.cos(rad) + forma[i][1]*Math.sin(rad);
     
   }
+
+  
