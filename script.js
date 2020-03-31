@@ -61,9 +61,9 @@
     Implemente aqui o código para escalar o objeto
     Não se esqueça de chamar a função draw_polygon ao final
     */
-    
-    var xref = forma[0][0];
-    var yref = forma[0][1];
+    var pm = getcenter(forma);
+    var xref = pm[0];
+    var yref = pm[1];
 
     for(var i=0;i<forma.length;i++) {
       forma[i][0] -= xref;
@@ -99,6 +99,14 @@
       
     }
     draw_polygon();   
+  }
+
+
+  /*
+  Funcao que recebe como parametro x ou y e realiza o espelhamento da forma
+  */
+  function espelhar(eixo) {
+    
   }
   
   function getcenter(f) {
