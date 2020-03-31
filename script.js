@@ -61,6 +61,7 @@
     Implemente aqui o código para escalar o objeto
     Não se esqueça de chamar a função draw_polygon ao final
     */
+    
     var xref = forma[0][0];
     var yref = forma[0][1];
 
@@ -82,16 +83,9 @@
     //deve fazer a conversao de graus para radianos.
     var rad = graus * (Math.PI/180);
     
-    var xm = 0;
-    var ym = 0;
-    
-    for(var i=0;i<forma.length;i++)  {
-      xm+=forma[i][0];
-      ym+=forma[i][1];
-    }
-    
-    xm=xm/forma.length;
-    ym=ym/forma.length;
+    var pm = getcenter(forma);
+    var xm = pm[0];
+    var ym = pm[1];
     
     for(var i=0;i<forma.length;i++) {
       forma[i][0] -= xm;
@@ -100,11 +94,27 @@
       var x = (forma[i][0]*Math.cos(rad)) - (forma[i][1]*Math.sin(rad));
       var y = (forma[i][1]*Math.cos(rad)) + (forma[i][0]*Math.sin(rad));
       
+      forma[i][0]=x+xm;
+      forma[i][1]=y+ym;
       
     }
+    draw_polygon();   
+  }
+  
+  function getcenter(f) {
+    var x=0;
+    var y=0;
+    var pm=[];
     
-    x = forma[i][0]*Math.cos(rad) + forma[i][1]*Math.sin(rad);
+    for(var i=0;i<f.length;i++)  {
+      x+=f[i][0];
+      y+=f[i][1];
+    }
     
+    x=x/f.length;
+    y=y/f.length;
+    
+    return [x,y];
   }
 
   
